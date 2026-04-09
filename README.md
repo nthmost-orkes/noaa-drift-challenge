@@ -271,20 +271,31 @@ You should explore the NOAA API to find relevant stations near this location and
 
 ## Deliverables
 
-Please submit:
+Build a **local web application** that allows a user to:
 
-1. **Working Python code** that:
-   - Takes incident location, time, and duration as input
-   - Queries the NOAA API for relevant current predictions
-   - Calculates and outputs predicted debris positions
-   - Handles errors gracefully
+1. **Input** the last known coordinates of a vessel (latitude, longitude), the incident time, and a prediction window (hours)
+2. **Output** a list of probable debris locations over time, showing the predicted drift trajectory
 
-2. **A brief explanation** (can be comments in code or a separate document):
-   - Your methodology
-   - Assumptions and limitations
-   - Ideas for improvement
+The application should run locally on your machine and be accessible via a web browser. You may use any web framework (Flask, FastAPI, Streamlit, etc.) and any frontend approach (plain HTML, a JS framework, or server-rendered templates).
 
-3. **Sample output** from running your code on the test scenario
+### Requirements
+
+- The web interface should have input fields for:
+  - Latitude and longitude (decimal degrees)
+  - Incident date and time
+  - Prediction duration (hours)
+- Submitting the form should query the NOAA API and display results
+- Results should show predicted positions at regular intervals (e.g., hourly)
+- The interface should handle and display errors gracefully (invalid coordinates, API failures, etc.)
+
+### Also submit
+
+- **A brief explanation** (can be comments in code or a separate document):
+  - Your methodology for calculating drift
+  - Assumptions and limitations
+  - Ideas for improvement
+
+- **Sample output** from running your app on the test scenario
 
 ---
 
