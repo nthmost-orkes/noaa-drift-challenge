@@ -298,12 +298,24 @@ If time permits, wrap your solution in a **local web application** that allows a
 
 You may use any web framework (Flask, FastAPI, Streamlit, etc.). The bar here is functional, not polished.
 
+### Design Consideration: Production Readiness
+
+Imagine this system will be deployed as a **high-availability service for Coast Guard emergency dispatchers**. When a distress call comes in, responders need drift predictions *immediately* — every minute of delay affects search area calculations and resource deployment.
+
+In your explanation or discussion, address:
+- How would you architect this for sub-second response times?
+- What would you cache, pre-compute, or optimize?
+- How would you handle NOAA API outages or slowdowns?
+- What are the failure modes and how would you mitigate them?
+
+You don't need to implement production infrastructure, but we want to see that you're thinking beyond "it works on my laptop."
+
 ### Also submit
 
 - **A brief explanation** (can be comments in code or a separate document):
   - Your methodology for calculating drift
   - Assumptions and limitations
-  - Ideas for improvement
+  - How you'd approach the production readiness concerns above
 
 - **Sample output** from running your code on the test scenario
 
