@@ -296,7 +296,7 @@ If time permits, wrap your solution in a **local web application** that allows a
 1. **Input** the last known coordinates of a vessel (latitude, longitude), the incident time, and a prediction window (hours)
 2. **Output** a list of probable debris locations over time, showing the predicted drift trajectory
 
-You may use any web framework (Flask, FastAPI, Streamlit, etc.). The bar here is functional, not polished.
+You may use any web framework or approach. The bar here is functional, not polished.
 
 ### Design Consideration: Production Readiness
 
