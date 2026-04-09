@@ -2,7 +2,7 @@
 
 ## Background & Motivation
 
-On the morning of March 15th, 2024, the container ship *MV Pacific Wanderer* lost 47 shipping containers approximately 2.3 nautical miles west of the Golden Gate Bridge during heavy swells. The Coast Guard immediately initiated search and rescue operations, but the question on everyone's mind was: **where will the debris end up?**
+On the morning of March 10th, 2026, the container ship *MV Pacific Wanderer* lost 47 shipping containers approximately 2.3 nautical miles west of the Golden Gate Bridge during heavy swells. The Coast Guard immediately initiated search and rescue operations, but the question on everyone's mind was: **where will the debris end up?**
 
 This scenario, while fictional, represents a real class of problems that maritime authorities, environmental response teams, and search-and-rescue coordinators face regularly. The movement of floating objects in coastal waters is governed by a complex interplay of tidal currents, wind-driven surface currents, and the Coriolis effect. While full oceanographic modeling requires sophisticated tools like GNOME (General NOAA Operational Modeling Environment), a surprising amount of useful prediction can be done using publicly available tidal current data.
 
@@ -79,8 +79,8 @@ Parameters are passed as query string arguments. Required parameters vary by pro
 |-----------|-------------|----------------|
 | `station` | Station ID | `9414290`, `SFB1203`, `cb0102` |
 | `product` | Data type | `water_level`, `predictions`, `currents`, `currents_predictions` |
-| `begin_date` | Start date | `20240315`, `20240315 14:00` |
-| `end_date` | End date | `20240316`, `20240316 14:00` |
+| `begin_date` | Start date | `20260310`, `20260310 14:00` |
+| `end_date` | End date | `20260311`, `20260311 14:00` |
 | `datum` | Reference datum | `MLLW`, `NAVD`, `STND` |
 | `units` | Measurement units | `english`, `metric` |
 | `time_zone` | Time reference | `gmt`, `lst`, `lst_ldt` |
@@ -166,7 +166,7 @@ For `currents_predictions` with `vel_type=default`:
     "units": "knots",
     "cp": [
       {
-        "t": "2024-03-15 00:00",
+        "t": "2026-03-10 00:00",
         "Velocity_Major": 1.23,
         "meanEbbDir": 245,
         "meanFloodDir": 65,
@@ -184,10 +184,10 @@ For `currents_predictions` with `interval=MAX_SLACK`:
   "current_predictions": {
     "units": "knots",
     "cp": [
-      {"t": "2024-03-15 02:34", "type": "slack"},
-      {"t": "2024-03-15 05:48", "Velocity_Major": -2.1, "meanEbbDir": 245, "type": "ebb"},
-      {"t": "2024-03-15 08:52", "type": "slack"},
-      {"t": "2024-03-15 12:06", "Velocity_Major": 1.8, "meanFloodDir": 65, "type": "flood"}
+      {"t": "2026-03-10 02:34", "type": "slack"},
+      {"t": "2026-03-10 05:48", "Velocity_Major": -2.1, "meanEbbDir": 245, "type": "ebb"},
+      {"t": "2026-03-10 08:52", "type": "slack"},
+      {"t": "2026-03-10 12:06", "Velocity_Major": 1.8, "meanFloodDir": 65, "type": "flood"}
     ]
   }
 }
@@ -201,7 +201,7 @@ For `currents_predictions` with `vel_type=speed_dir`:
     "units": "knots",
     "cp": [
       {
-        "t": "2024-03-15 00:00",
+        "t": "2026-03-10 00:00",
         "Speed": 1.23,
         "Direction": 67.5,
         "Bin": 1
@@ -262,7 +262,7 @@ CO-OPS may throttle requests during high load. Best practices: add delays betwee
 
 **Incident Details:**
 - Location: 37.8044° N, 122.4780° W (approximately 2 NM west of Golden Gate Bridge)
-- Time: March 15, 2024, 14:00 UTC
+- Time: March 10, 2026, 14:00 UTC
 - Prediction window: 24 hours
 
 You should explore the NOAA API to find relevant stations near this location and determine what data is available.
@@ -271,7 +271,7 @@ You should explore the NOAA API to find relevant stations near this location and
 
 If the NOAA API is unavailable during your session, `fallback_data.zip` contains cached API responses for the test scenario:
 - Station metadata and current predictions for nearby stations
-- Data covering March 15-17, 2024
+- Data covering March 10-12, 2026
 
 Extract and use this data only if you cannot reach the live API.
 
