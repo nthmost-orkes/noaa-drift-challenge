@@ -273,7 +273,7 @@ You should explore the NOAA API to find relevant stations near this location and
 
 ### Core Deliverable
 
-**Working Python code** that:
+**Working code** (any language) that:
 - Takes incident location (lat/lon), time, and duration as input
 - Queries the NOAA API for relevant current predictions
 - Calculates and outputs predicted debris positions at regular intervals
