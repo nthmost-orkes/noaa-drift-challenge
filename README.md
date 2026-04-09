@@ -271,22 +271,24 @@ You should explore the NOAA API to find relevant stations near this location and
 
 ## Deliverables
 
-Build a **local web application** that allows a user to:
+### Core Deliverable
+
+**Working Python code** that:
+- Takes incident location (lat/lon), time, and duration as input
+- Queries the NOAA API for relevant current predictions
+- Calculates and outputs predicted debris positions at regular intervals
+- Handles errors gracefully
+
+This can be a command-line script, a function you call from a REPL, or any other format that demonstrates working functionality.
+
+### Stretch Goal: Web Interface
+
+If time permits, wrap your solution in a **local web application** that allows a user to:
 
 1. **Input** the last known coordinates of a vessel (latitude, longitude), the incident time, and a prediction window (hours)
 2. **Output** a list of probable debris locations over time, showing the predicted drift trajectory
 
-The application should run locally on your machine and be accessible via a web browser. You may use any web framework (Flask, FastAPI, Streamlit, etc.) and any frontend approach (plain HTML, a JS framework, or server-rendered templates).
-
-### Requirements
-
-- The web interface should have input fields for:
-  - Latitude and longitude (decimal degrees)
-  - Incident date and time
-  - Prediction duration (hours)
-- Submitting the form should query the NOAA API and display results
-- Results should show predicted positions at regular intervals (e.g., hourly)
-- The interface should handle and display errors gracefully (invalid coordinates, API failures, etc.)
+You may use any web framework (Flask, FastAPI, Streamlit, etc.). The bar here is functional, not polished.
 
 ### Also submit
 
@@ -295,7 +297,7 @@ The application should run locally on your machine and be accessible via a web b
   - Assumptions and limitations
   - Ideas for improvement
 
-- **Sample output** from running your app on the test scenario
+- **Sample output** from running your code on the test scenario
 
 ---
 
