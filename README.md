@@ -267,6 +267,14 @@ CO-OPS may throttle requests during high load. Best practices: add delays betwee
 
 You should explore the NOAA API to find relevant stations near this location and determine what data is available.
 
+### Fallback Data
+
+If the NOAA API is unavailable during your session, `fallback_data.zip` contains cached API responses for the test scenario:
+- Station metadata and current predictions for nearby stations
+- Data covering March 15-17, 2024
+
+Extract and use this data only if you cannot reach the live API.
+
 ---
 
 ## Deliverables
